@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício 6 - JS</title>
+</head>
+
+<body>
+    <script>
+        // 6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+
+        var aprov = 0
+        var SN = "S"
+
+        while (SN == "S") {
+            var n1 = parseInt(prompt("Digite a primeira nota do aluno:"));
+            var n2 = parseInt(prompt("Digite a segunda nota do aluno:"));
+
+            media = (n1 + n2) / 2
+            if (media >= 9.5) {
+                aprov = aprov + 1
+            }
+
+            var SN = prompt("Calcular a média de outro aluno Sim/Não?")
+        }
+
+        alert("Número de Alunos Aprovados: " + aprov )
+
+
+    </script>
+</body>
+
+</html>

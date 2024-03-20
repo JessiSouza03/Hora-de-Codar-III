@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício 7 - JS</title>
+</head>
+
+<body>
+    <script>
+        // 7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        //Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+
+        var notas = []; 
+        var numeroDeNotas = 6;
+
+        var soma = 0
+        for (var i = 0; i < numeroDeNotas; i++) {
+            var nota
+            do {
+                nota = parseFloat(prompt("Digite a nota " + (i + 1) + ":"));
+            } while (nota < 0 || nota > 10 || isNaN(nota));
+
+            notas.push(nota); 
+            soma += nota;
+        }
+
+        var media = soma / numeroDeNotas;
+
+        alert("A média das notas é: " + media);
+
+    </script>
+</body>
+
+</html>
